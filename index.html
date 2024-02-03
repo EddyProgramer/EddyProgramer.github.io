@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventuras de jagu</title>
+    <title>Aventuras de Jagu</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #juegoContainer {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Aventuras de jagu</h1>
+    <div id="inicioContainer">
+        <h1>Aventuras de Jagu</h1>
+        <button onclick="cargarJuego()">Jugar</button>
+    </div>
 
-    <iframe src="https://EddyProgramer.github.io/webgl/index.html" width="800" height="600"></iframe>
+    <div id="juegoContainer">
+        <iframe id="juegoFrame" width="800" height="600" src=""></iframe>
+    </div>
+
+    <script>
+        function cargarJuego() {
+            // Oculta el contenedor de inicio
+            document.getElementById('inicioContainer').style.display = 'none';
+
+            // Muestra el contenedor del juego
+            document.getElementById('juegoContainer').style.display = 'block';
+
+            // Actualiza la URL del iframe para cargar el juego
+            document.getElementById('juegoFrame').src = 'https://EddyProgramer.github.io/webgl/index.html';
+        }
+    </script>
 </body>
 </html>
