@@ -17,23 +17,12 @@
 </head>
 <body>
 
-    <div id="inicioContainer">
-        <h1>Aventuras de Jagu</h1>
-        <button onclick="cargarJuego()">Jugar</button>
-    </div>
 
-    <div id="juegoContainer">
-        <iframe id="juegoFrame" width="800" height="600" src=""></iframe>
-    </div>
 
     <script>
         function cargarJuego() {
-            // Oculta el contenedor de inicio
-            document.getElementById('inicioContainer').style.display = 'none';
-
-            // Muestra el contenedor del juego
-            document.getElementById('juegoContainer').style.display = 'block';
-
+      
+            
             // Actualiza la URL del iframe para cargar el juego
             document.getElementById('juegoFrame').src = 'https://github.com/EddyProgramer/EddyProgramer.github.io/blob/main/webgl/index.html';
         }
