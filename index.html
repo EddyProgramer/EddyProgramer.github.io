@@ -6,6 +6,24 @@
     <title>Mi Juego WebGL</title>
 </head>
 <body>
-    <iframe src="https://EddyProgramer.github.io/web gl/index.html" width="800" height="600"></iframe>
+    <iframe id="webglFrame" src="https://EddyProgramer.github.io/web gl/index.html" width="800" height="600"></iframe>
+
+    <button onclick="toggleFullscreen()">Pantalla completa</button>
+
+    <script>
+        function toggleFullscreen() {
+            var iframe = document.getElementById('webglFrame');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        }
+    </script>
 </body>
 </html>
+
